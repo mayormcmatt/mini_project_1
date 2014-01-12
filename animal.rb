@@ -1,18 +1,14 @@
 class Animal
-	# @@animal = []
-	attr_accessor :name, :age, :gender, :species
-	def initialize(name, age, gender, species)
+	attr_accessor :name, :age, :gender, :species, :exist
+	def initialize(name, age, gender, species, exist = nil)
 		@name = name
 		@age = age
 		@gender = gender
 		@species = species
-		# @@animal << self
+		@exist = exist
 	end
 
-	def test
-		puts "A test of animal creation"
+	def exists?
+		@exist.nil?
 	end
 end
-
-neko = Animal.new("fluffs", 5, "female", "cat")
-neko.test
