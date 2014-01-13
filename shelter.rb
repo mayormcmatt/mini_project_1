@@ -31,5 +31,8 @@ class Shelter
 	def remove_animal(animal)
 		@animal.delete(animal)
 	end
+
+	def animal_from_client(animal)
+	end
 end
 
